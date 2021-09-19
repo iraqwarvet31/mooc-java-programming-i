@@ -5,6 +5,21 @@ public class LargerThanOrEqualTo {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
+        
+        // Get first num
+        System.out.println("Give the first number:");
+        int first = Integer.valueOf(scan.nextLine());
+        
+        // Get second num
+        System.out.println("Give the second number:");
+        int second = Integer.valueOf(scan.nextLine());
+        
+        if (first == second) {
+            System.out.println("The numbers are equal!");
+        } else if (first > second) {
+            System.out.println("Greater number is: " + first);
+        } else {
+            System.out.println("Greater number is: " + second);
+        }
     }
 }
