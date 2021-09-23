@@ -16,6 +16,20 @@ public class OnTheList {
 
             list.add(input);
         }
-
+        System.out.print("Search for? ");
+        String name = scanner.nextLine();
+        boolean isFound = false;
+        for (int i = 0; i < list.size(); i++) {
+            if (name.equals(list.get(i))) {
+                isFound = true;
+                break;
+            }
+        }
+        
+        if (isFound) {
+            System.out.println(name + " was found!");
+        } else {
+            System.out.println(name + " was not found!");
+        }
     }
 }

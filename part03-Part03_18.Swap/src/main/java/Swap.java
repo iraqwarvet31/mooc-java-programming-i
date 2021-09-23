@@ -21,8 +21,13 @@ public class Swap {
 
         // Implement here
         // asking for the two indices
+        int first = Integer.valueOf(scanner.nextLine());
+        int second = Integer.valueOf(scanner.nextLine());
         // and then swapping them
-
+        int temp = array[first];
+        array[first] = array[second];
+        array[second] = temp;
+        
         System.out.println("");
         index = 0;
         while (index < array.length) {
