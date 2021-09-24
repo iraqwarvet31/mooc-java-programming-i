@@ -13,5 +13,7 @@ public class Main {
         // System.out.println("multiplyByFour.multiply(2): " + multiplyByFour.multiply(2));
         // System.out.println("multiplyByThree.multiply(1): " + multiplyByThree.multiply(1));
         // System.out.println("multiplyByFour.multiply(1): " + multiplyByFour.multiply(1));
+        Multiplier m = new Multiplier(10);
+        System.out.println(m.multiply(5));
     }
 }
