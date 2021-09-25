@@ -12,6 +12,20 @@ public class MainProgram {
         paulsCard.eatHeartily();
         mattsCard.eatAffordably();
         
-        System.out.println("Paul");
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+        
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+        
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+        
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+        
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
     }
 }

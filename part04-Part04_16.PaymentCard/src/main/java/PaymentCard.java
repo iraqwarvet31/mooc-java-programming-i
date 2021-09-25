@@ -20,25 +20,27 @@ public class PaymentCard {
     }
     
     public void eatAffordably() {
-        double difference = this.balance - 2.60;
-        if (difference > -1) {
-            this.balance = difference;
+        if (this.balance >= 2.60) {
+            this.balance -= 2.60;
         }
     }
     
     public void eatHeartily() {
-        double difference = this.balance - 4.60;
-        if (difference > -1) {
-            this.balance = difference;
+        if (this.balance >= 4.60) {
+            this.balance -= 4.60;
         }
     }
     
     public void addMoney(double amount) {
-        double addition = this.balance + amount;
-        if (addition >= 150) {
-            this.balance = 150.0;
-        } else if (addition >= 0 && addition < 150) {
-            this.balance += amount;
-        } 
+        double total;
+        double overage;
+        if (amount > 0) {
+            total = this.balance + amount;
+            overage = total - 150;
+            if (total > 150.00) {
+                total -= overage;
+            }
+            this.balance = total;
+        }
     }
 }
