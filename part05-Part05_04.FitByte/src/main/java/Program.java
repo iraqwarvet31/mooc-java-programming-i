@@ -15,5 +15,10 @@ public class Program {
 //            percentage += 0.1;
 //        }
 
+        // "With age 30 and resting heart rate 60, the target heart rate should be about 122.485 
+        //  when the target percentage is half of maximum.", 122.485, target, 0.1
+//        Fitbyte f = new Fitbyte(30, 60);
+        
+
     }
 }
