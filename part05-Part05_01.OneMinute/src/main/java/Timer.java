@@ -9,15 +9,24 @@
  * @author justadev
  */
 public class Timer {
-    private int hundredsOfSeconds;
-    private int seconds;
+    private ClockHand hundredsOfSeconds;
+    private ClockHand seconds;
     
     public Timer () {
-        this.hundredsOfSeconds = 0;
-        this.seconds = 0;
+        this.hundredsOfSeconds = new ClockHand(100);
+        this.seconds = new ClockHand(60);
     }
     
     public void advance() {
+        this.hundredsOfSeconds.advance();
         
+        if (this.hundredsOfSeconds.value() == 0) {
+            this.seconds.advance();
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return this.seconds + ":" + this.hundredsOfSeconds;
     }
 }
