@@ -15,19 +15,18 @@ public class Song {
         if (this == compared) {
             return true;
         }
+        if (!(compared instanceof Song)) {
         return false;
-//        if (!(compared instanceof Song)) {
-//        return false;
-//        }
-//        
-//        Song comparedSong = (Song) compared;
-//        
-//        if (this.artist == comparedSong.artist &&
-//            this.name == comparedSong.name &&
-//            this.durationInSeconds == comparedSong.durationInSeconds) {
-//            return true;
-//        }
-//        return false;
+        }
+        
+        Song comparedSong = (Song) compared;
+        
+        if (this.artist == comparedSong.artist &&
+            this.name == comparedSong.name &&
+            this.durationInSeconds == comparedSong.durationInSeconds) {
+            return true;
+        }
+        return false;
     }
 
     @Override

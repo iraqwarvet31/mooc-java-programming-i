@@ -11,10 +11,7 @@ public class SimpleDate {
         this.year = year;
     }
 
-    @Override
-    public String toString() {
-        return this.day + "." + this.month + "." + this.year;
-    }
+    
 
     public boolean before(SimpleDate compared) {
         if (this.year < compared.year) {
@@ -31,6 +28,23 @@ public class SimpleDate {
         }
 
         return false;
+    }
+    
+    public void advance() {
+       this.day++;
+       if (this.day > 30) {
+           this.day = 1;
+           this.month++;
+           if (this.month == 12) {
+               this.month = 1;
+               this.year++;
+           }
+       }
+    }
+    
+    @Override
+    public String toString() {
+        return this.day + "." + this.month + "." + this.year;
     }
 
 }
